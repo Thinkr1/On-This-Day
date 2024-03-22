@@ -44,4 +44,8 @@ submitBtn.addEventListener("click", () => {
                 eventsDiv.appendChild(eventEl)
             })
         })
+        .catch(err=> {
+            console.log(err)
+            events.Div.textContent=`Error: Unable to retrieve events. (${err})`
+        })
 })
